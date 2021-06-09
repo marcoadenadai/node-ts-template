@@ -1,0 +1,20 @@
+controllers (ou api) -> aceitar solicitação, passar pro serviço correto e então
+               devolver a resposta ao cliente.
+
+services    -> serviço das regras de negócio da sua aplicação.
+
+repositories -> camada de acesso e interação com banco de dados.
+
+https://medium.com/@diomalta/como-organizar-e-estruturar-projetos-com-node-js-4845be004899
+
+
+src
+│   server.js       # App entry point
+└───api             # Express route controllers for all the endpoints of the app
+└───config          # Environment variables and configuration related stuff
+└───jobs            # Jobs definitions for agenda.js
+└───loaders         # Split the startup process into modules
+└───models          # Database models
+└───services        # All the business logic is here
+└───subscribers     # Event handlers for async task
+└───types           # Type declaration files (d.ts) for Typescript
